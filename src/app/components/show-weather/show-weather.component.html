@@ -1,0 +1,36 @@
+  <div class="bottom">
+    <div class="weather">
+      <div class="weather">
+        <div class="top">
+          <div class="parameter-row">
+            <label class="parameter-label bold">Maribor </label>
+            <label class="weatherDescription">{{currentWeather.weather[0].main}}</label>
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="temperatur bold">{{currentWeather.main.temp  | number:'1.0-0'}}°C</p>
+          <div class="details">
+            <div class="parameter-row">
+              <span class="parameter-label bold">Details</span>
+            </div>
+            <div class="parameter-row">
+              <span class="parameter-label bold">Feels like: </span>
+              <span class="parameter-value">{{currentWeather.main.feels_like  | number:'1.0-0'}}°C</span>
+            </div>
+            <div class="parameter-row">
+              <span class="parameter-label bold">Wind: </span>
+              <span class="parameter-value">{{currentWeather.wind.speed}} m/s</span>
+            </div>
+            <div class="parameter-row">
+              <span class="parameter-label bold">Humidity: </span>
+              <span class="parameter-value">{{currentWeather.main.humidity}}%</span>
+            </div>
+            <div class="parameter-row">
+              <span class="parameter-label bold">Pressure: </span>
+              <span class="parameter-value">{{currentWeather.main.pressure}}hPa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
