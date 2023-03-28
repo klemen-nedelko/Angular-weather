@@ -104,7 +104,11 @@ select::-ms-expand{
   display: none;
 }
 .select-row{
-  width: 50%;
+  margin-right: var(--content-margin);
+  width: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .flag-row{
   width: 50%;
