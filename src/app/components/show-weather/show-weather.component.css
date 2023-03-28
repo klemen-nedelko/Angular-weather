@@ -1,20 +1,32 @@
-
 .parameter-row{
-  display: flex !important;
-  justify-content: space-between !important;
+  display: flex;
+  justify-content: space-between;
 }
 .parameter-label {
-  text-align: left !important;
+  text-align: left;
+  font-weight:400 !important;
+  font-size: 18px !important;
+}
+.details {
+  width: 100%;
+  padding-left: 0px;
+
 }
 .parameter-value{
-  text-align: right !important;
+  text-align: right;
+  font-weight: 600 !important;
+  font-size: 12px !important;
 }
 .details {
   width: 100%;
   padding-left: 20px;
 }
-.city{
-  margin-left: 10px;
+.city {
+  font-weight: 600;
+  font-size: 18px;
+  line-height:1;
+  margin: 0;
+  letter-spacing: 1px;
 }
 .bottom{
   margin-left: auto;
@@ -23,4 +35,17 @@
   display: flex;
   align-content: flex-end;
   flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+.weatherDescription {
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height:1 !important;
+  margin: 0 !important;
+}
+.top{
+  margin-top: 5px !important;
+}
+.weather-icon{
+  height: 4em;
 }

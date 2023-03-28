@@ -1,6 +1,8 @@
 import { Component, Output, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { WeatherServiceService } from './weather-service.service';
+import { WeatherServiceService } from './service/weather-service.service';
+import * as moment from "moment";
+import { LoadingService } from './service/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +11,13 @@ import { WeatherServiceService } from './weather-service.service';
 })
 export class AppComponent implements OnInit {
 
+  loading$ = this.loader.loading$;
+
   selected:string ='';
 
   lang!: string;
 
-  constructor(private weatherService: WeatherServiceService, private translate: TranslateService){
+  constructor(private weatherService: WeatherServiceService, private translate: TranslateService, public loader: LoadingService) {
     this.translate.setDefaultLang('en');
     this.translate.setDefaultLang(localStorage.getItem('lang') || 'en');
   }
@@ -24,19 +28,14 @@ export class AppComponent implements OnInit {
 
   @Output()
   currentWeather: any = [];
-
-
-  currentTime = new Date();
+  dateMoment = moment().format('DD.MM.YYYY');
+  formatTime = moment().format('HH:mm');
 
   refreshWeather(){
-
-    this.weatherService.getWeather().subscribe((data) => {
-      this.currentWeather = data;
-  })
-
-  this.currentTime = new Date();
-  this.ngOnInit();
-  console.log(this.currentWeather);
+  //   this.weatherService.getWeather().subscribe((data) => {
+  //     this.currentWeather = data;
+  // })
+  console.log("refresh");
   }
   changeLang(lang:any) {
     console.log(lang);

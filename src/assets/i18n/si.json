@@ -5,5 +5,9 @@
   "feels like": "Občutek",
   "wind": "Veter",
   "humidity": "Vlažnost",
-  "pressure":"Pritisk"
+  "pressure":"Pritisk",
+  "temperature": "Temperatura",
+  "max": "Maks",
+  "5-day forecast": "5-dnevna napoved",
+  "at": "ob"
 }

@@ -5,5 +5,9 @@
   "feels like": "Feels like",
   "wind": "Wind",
   "humidity": "Humidity",
-  "pressure":"Pressure"
+  "pressure":"Pressure",
+  "temperature": "Temperature",
+  "max": "Max",
+  "5-day forecast": "5-day forecast",
+  "at": "at"
 }

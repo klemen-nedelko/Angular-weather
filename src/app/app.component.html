@@ -1,16 +1,24 @@
 <header>
-  <span>Weather</span>
-  <select [(ngModel)]="selected" (ngModelChange)="changeLang($event)">
+  <div class="container">
+    <div class="row">
+  <span class="website-name">Weather</span>
+  </div>
+  <div class="row">
+    <div class="select-row">
+  <select class="select" [(ngModel)]="selected" (ngModelChange)="changeLang($event)">
     <option value="en"  [selected]="lang == 'en'">EN</option>
-    <option value="si" [selected]="lang == 'si'">SI</option>
+    <option value="si" [selected]="lang == 'si'">SI </option>
   </select>
+  </div>
+</div>
+</div>
 </header>
 
+<div class="loader" *ngIf="loading$ | async"></div>
 <div class="over">
-
   <div class="content">
     <div class="time-badge">
-      <span class="time-text">Maribor, {{'acquired' | translate}} {{currentTime | date:"dd.MM.YY, HH:MM"}}</span>
+      <span class="time-text">Maribor, {{'acquired' | translate}} {{dateMoment}}  {{'at' | translate}} {{formatTime}}</span>
     </div>
     <div class="forecast-container">
       <div class="forecast-window">
@@ -26,4 +34,6 @@
   </div>
 
 </div>
+
+
 

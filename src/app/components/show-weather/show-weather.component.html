@@ -2,9 +2,10 @@
     <div class="weather">
       <div class="weather">
         <div class="top">
-          <div class="parameter-row">
-            <label class="parameter-label bold">Maribor </label>
-            <label class="weatherDescription">{{currentWeather.weather[0].main }}</label>
+          <div class="">
+            <label class="city bold">Maribor </label>
+            <label class="weatherDescription">{{currentWeather.weather[0].main}}</label>
+            <img class="weather-icon" src="/assets/icons/{{currentWeather.weather[0].icon}}.png"/>
           </div>
         </div>
         <div class="bottom">

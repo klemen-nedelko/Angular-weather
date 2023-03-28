@@ -1,7 +1,25 @@
-/* .main{
-  display: grid;
-  grid-template-columns: repeat(5, 2rem);
+.primary h3{
+  margin-left: 4px;
+  margin-right: 4px;
 }
-.icon{
-  height:1em;
-} */
+
+ul{
+  list-style-type: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  display: flex;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+}
+li{
+  margin: 0px !important;
+}
+
+.line{
+  border: 1px solid #000;
+  padding-inline-start: -5px;
+}
+.weather-icon-small{
+  height: 2em;
+}
