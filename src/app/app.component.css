@@ -136,6 +136,7 @@ select::-ms-expand{
 }
 
 
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -164,4 +165,16 @@ select::-ms-expand{
     justify-content: center;
     align-items: center;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  .forecast-container {
+    display: inline-block !important;
+    flex-wrap: nowrap !important;
+    max-height: 100% !important;
+  }
+  .forecast-window {
+    width:100% !important;
+  }
+
 }
