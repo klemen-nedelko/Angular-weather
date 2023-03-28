@@ -25,7 +25,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
+  height: var(--header-height);
   margin-bottom: var(--content-margin);
 }
 
@@ -67,6 +67,7 @@ header{
 .row{
   width: 50%;
   display: inline-flex;
+  justify-content: flex-end;
 }
 .refresh {
   display: inline-block;
@@ -93,20 +94,14 @@ select{
   appearance: none;
   background-color:transparent;
   border: none;
-  padding: 0 1em 0 0;
   margin: 0;
-  font-family: inherit;
-  font-size: inherit;
   cursor: inherit;
   line-height: inherit;
   text-align: center;
+  width: 50px;
 }
 select::-ms-expand{
   display: none;
-}
-select:hover{
-  border: 1px solid #fff;
-  border-radius: 3px;
 }
 .select-row{
   width: 50%;
@@ -114,7 +109,6 @@ select:hover{
 .flag-row{
   width: 50%;
 }
-
 
 .loader {
   transform: translate(50%, 50%);
@@ -140,6 +134,7 @@ select:hover{
   top: 0;
   left: 0;
 }
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }

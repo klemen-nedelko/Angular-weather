@@ -8,18 +8,28 @@ import { WeatherServiceService } from 'src/app/service/weather-service.service';
 })
 export class ShowWeatherComponent implements OnInit {
 
-  @Input()
+
   currentWeather: any = [];
   timeline:any = [];
   weatherNow: any;
 
-
   constructor(private weatherService: WeatherServiceService){ }
 
   ngOnInit(): void {
-      this.weatherService.getWeather().subscribe((data) => {
-        this.currentWeather = data;
-    })
-  }
 
+    const savedData = localStorage.getItem('currentWeather');
+
+    if(savedData) {
+
+      const currentWeather = JSON.parse(savedData);
+      this.currentWeather = currentWeather;
+
+    }else{
+
+      this.currentWeather =  this.weatherService.getWeather().subscribe((data) => {
+        this.currentWeather = data;
+        localStorage.setItem('currentWeather', JSON.stringify(this.currentWeather));
+      })
+    }
+  }
 }

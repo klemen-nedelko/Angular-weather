@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { WeatherServiceService } from './service/weather-service.service';
 import * as moment from "moment";
 import { LoadingService } from './service/loading.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,33 +13,31 @@ import { LoadingService } from './service/loading.service';
 export class AppComponent implements OnInit {
 
   loading$ = this.loader.loading$;
-
   selected:string ='';
-
   lang!: string;
+  dateMoment = moment().format('DD.MM.YYYY');
+  formatTime = moment().format('HH:mm');
 
-  constructor(private weatherService: WeatherServiceService, private translate: TranslateService, public loader: LoadingService) {
+  constructor(private weatherService: WeatherServiceService, private translate: TranslateService,
+    public loader: LoadingService, private loadingService: LoadingService) {
     this.translate.setDefaultLang('en');
     this.translate.setDefaultLang(localStorage.getItem('lang') || 'en');
   }
   ngOnInit(): void {
     this.selected = localStorage.getItem('lang') || 'en';
-
   }
 
-  @Output()
-  currentWeather: any = [];
-  dateMoment = moment().format('DD.MM.YYYY');
-  formatTime = moment().format('HH:mm');
-
-  refreshWeather(){
-  //   this.weatherService.getWeather().subscribe((data) => {
-  //     this.currentWeather = data;
-  // })
-  console.log("refresh");
+  refreshWeather() {
+    this.loadingService.show();
+    this.weatherService.getWeather().subscribe(()=>{
+      this.loadingService.hide();
+    });
+    this.weatherService.getForecast().subscribe(()=>{
+      this.loadingService.hide();
+    });;
   }
+
   changeLang(lang:any) {
-    console.log(lang);
     localStorage.setItem('lang', lang);
     window.location.reload();
   }

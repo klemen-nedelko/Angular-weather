@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 :root{
   --header-backgroud:#e86e1e;
   --white: #fff;
@@ -7,13 +8,15 @@
   --header-height-lg: 56px;
   --content-width: 320px;
   --content-width-lg: 460px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --header-height: 32px;
+  --header-height-lg:55px
 }
 
 body{
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  font-family: 'Oxygen', sans-serif;
 }
 
 .forecast-text {

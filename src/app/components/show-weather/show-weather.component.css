@@ -7,11 +7,6 @@
   font-weight:400 !important;
   font-size: 18px !important;
 }
-.details {
-  width: 100%;
-  padding-left: 0px;
-
-}
 .parameter-value{
   text-align: right;
   font-weight: 600 !important;
@@ -19,7 +14,6 @@
 }
 .details {
   width: 100%;
-  padding-left: 20px;
 }
 .city {
   font-weight: 600;
