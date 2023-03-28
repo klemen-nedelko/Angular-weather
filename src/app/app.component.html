@@ -1,12 +1,16 @@
 <header>
   <span>Weather</span>
+  <select [(ngModel)]="selected" (ngModelChange)="changeLang($event)">
+    <option value="en"  [selected]="lang == 'en'">EN</option>
+    <option value="si" [selected]="lang == 'si'">SI</option>
+  </select>
 </header>
 
 <div class="over">
 
   <div class="content">
     <div class="time-badge">
-      <span class="time-text">Maribor, pridobljeno {{currentTime | date:"dd.MM.YY, HH:MM"}}</span>
+      <span class="time-text">Maribor, {{'acquired' | translate}} {{currentTime | date:"dd.MM.YY, HH:MM"}}</span>
     </div>
     <div class="forecast-container">
       <div class="forecast-window">
@@ -17,7 +21,7 @@
       </div>
     </div>
     <div class="refresh">
-      <button class="btn" (click)="refreshWeather()">Refresh</button>
+      <button class="btn" (click)="refreshWeather()">{{'refresh' | translate}}</button>
     </div>
   </div>
 
