@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+:root{
+  --header-backgroud:#e86e1e;
+  --white: #fff;
+  --background-color: #f5f5f5;
+  --content-margin: 16px;
+  --header-height: 44px;
+  --header-height-lg: 56px;
+  --content-width: 320px;
+  --content-width-lg: 460px;
+  --header-height: 32px;
+  --header-height-lg:55px
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: 'Oxygen', sans-serif;
+}
+
+.forecast-text {
+  color: black;
+}
+
+.bold{
+  font-weight: bold;
+}
