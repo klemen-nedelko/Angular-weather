@@ -2,12 +2,14 @@
   <h3>{{'5-day forecast' |translate}}</h3>
   <ul *ngFor="let forecast of weatherData">
     <li class="main">
-      {{forecast.dt_txt | date:'EEE, MM.dd'}}
+      <div>
+      <span class="bold">{{forecast.dt_txt | date:'EEE, dd.MM'}}  </span>
       <img class="weather-icon-small" src="/assets/icons/{{forecast.weather[0].icon}}.png"/>
+    </div>
       <div class="temp-min-max">
       <span>{{'temperature' | translate}}</span>
       <span>
-        min: {{forecast.main.temp_min | number: '1.0-0'}}°C /
+        {{'min' | translate}}: {{forecast.main.temp_min | number: '1.0-0'}}°C /
         {{'max' | translate}}: {{forecast.main.temp_max | number: '1.0-0'}}°C
       </span>
       </div>

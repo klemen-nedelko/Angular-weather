@@ -104,7 +104,11 @@ select::-ms-expand{
   display: none;
 }
 .select-row{
-  width: 50%;
+  margin-right: var(--content-margin);
+  width: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .flag-row{
   width: 50%;
@@ -136,6 +140,7 @@ select::-ms-expand{
 }
 
 
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -164,4 +169,16 @@ select::-ms-expand{
     justify-content: center;
     align-items: center;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  .forecast-container {
+    display: inline-block !important;
+    flex-wrap: nowrap !important;
+    max-height: 100% !important;
+  }
+  .forecast-window {
+    width:100% !important;
+  }
+
 }

@@ -43,3 +43,7 @@
 .weather-icon{
   height: 4em;
 }
+.temperatur{
+  font-size: 1.5em !important;
+  text-align: center;
+}

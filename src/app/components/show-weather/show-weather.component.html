@@ -6,10 +6,10 @@
             <label class="city bold">Maribor </label>
             <label class="weatherDescription">{{currentWeather.weather[0].main}}</label>
             <img class="weather-icon" src="/assets/icons/{{currentWeather.weather[0].icon}}.png"/>
+            <p class="temperatur bold">{{currentWeather.main.temp  | number:'1.0-0'}}°C</p>
           </div>
         </div>
         <div class="bottom">
-          <p class="temperatur bold">{{currentWeather.main.temp  | number:'1.0-0'}}°C</p>
           <div class="details">
             <div class="parameter-row">
               <span class="parameter-label bold">{{'details' | translate}}</span>

@@ -10,8 +10,6 @@ export class ShowWeatherComponent implements OnInit {
 
 
   currentWeather: any = [];
-  timeline:any = [];
-  weatherNow: any;
 
   constructor(private weatherService: WeatherServiceService){ }
 

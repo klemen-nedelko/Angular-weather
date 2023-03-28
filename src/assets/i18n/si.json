@@ -7,6 +7,7 @@
   "humidity": "Vlažnost",
   "pressure":"Pritisk",
   "temperature": "Temperatura",
+  "min": "Min",
   "max": "Maks",
   "5-day forecast": "5-dnevna napoved",
   "at": "ob"
