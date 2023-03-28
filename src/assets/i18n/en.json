@@ -7,6 +7,7 @@
   "humidity": "Humidity",
   "pressure":"Pressure",
   "temperature": "Temperature",
+  "min": "Min",
   "max": "Max",
   "5-day forecast": "5-day forecast",
   "at": "at"
