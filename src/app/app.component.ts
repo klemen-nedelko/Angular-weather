@@ -3,7 +3,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { WeatherServiceService } from './service/weather-service.service';
 import * as moment from "moment";
 import { LoadingService } from './service/loading.service';
-import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',

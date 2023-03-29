@@ -1,6 +1,6 @@
 import { WeatherServiceService } from 'src/app/service/weather-service.service';
 import { Component, OnInit } from '@angular/core';
-import { map, pluck } from 'rxjs';
+import { pluck } from 'rxjs';
 
 @Component({
   selector: 'app-forecast',

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WeatherServiceService } from 'src/app/service/weather-service.service';
 
 @Component({
